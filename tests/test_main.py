@@ -102,6 +102,13 @@ def test_carnivore_bite_to_death():
     )
 
 
+def test_carnivore_bite_carnivore():
+    lion = Carnivore("Simba")
+    pantera = Carnivore("Bagire")
+    lion.bite(pantera)
+    assert pantera.health == 100
+
+
 def test_herbivore_hide():
     Animal.alive = []
     rabbit = Herbivore("Susan")

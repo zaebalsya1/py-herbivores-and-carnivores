@@ -9,11 +9,11 @@ Health is 100 and hidden is false by default.
 
 All alive animals should be in the class attribute `Animal.alive`. 
 If the health of the animal reaches 0, the beast dies and it should 
-be removed from `Animals.alive`.
+be removed from `Animal.alive`.
 ```python
 lion = Carnivore("Simba")
-len(Animals.alive) == 1
-isinstance(Animals.alive, Carnivore) is True
+len(Animal.alive) == 1
+isinstance(Animal.alive, Carnivore) is True
 ```
 
 Create a `Herbivore` class. This class should inherit from Animal. 
@@ -53,7 +53,7 @@ should look like this:
 ```python
 pantera = Carnivore("Bagira")
 snake = Carnivore("Kaa")
-print(Animals.alive)
+print(Animal.alive)
 # [{Name: Bagira, Health: 100, Hidden: False}, {Name: Kaa, Health: 100, Hidden: False}]
 ```
 Hint: Use magic method.

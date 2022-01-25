@@ -1,6 +1,4 @@
 import pytest
-import ast
-import inspect
 import io
 
 from contextlib import redirect_stdout
@@ -55,17 +53,15 @@ def test_animal_constructor():
 def test_only_one_method_should_be_declared_in_each_of_children_classes(
     class_, method
 ):
-    class_source = inspect.getsource(class_)
-    parsed_class = ast.parse(class_source)
-    assert [name.id for name in parsed_class.body[0].bases] == [
-        "Animal"
-    ], f"'{class_.__name__}' should be inherited from 'Animal'"
+    assert Animal in class_.__bases__, (
+        f"'{class_.__name__}' should be inherited from 'Animal'"
+    )
     assert (
-        len(parsed_class.body[0].body) == 1
-    ), f"Only one method '{method}' should be defined inside class '{class_.__name__}'"
-    assert (
-        parsed_class.body[0].body[0].name == method
-    ), f"Only one method '{method}' should be defined inside class '{class_.__name__}'"
+        method in class_.__dict__
+    ), f"Method '{method}' should be defined inside class '{class_.__name__}'"
+    assert {"__init__", "__str__", "__repr__"}.intersection(class_.__dict__) == set(), (
+        f"Magic methods should not be declared in {class_}"
+    )
 
 
 def test_carnivore_bite_not_hidden():

@@ -12,7 +12,7 @@ If the health of the animal reaches 0, the beast dies and it should
 be removed from `Animal.alive`.
 ```python
 lion = Carnivore("Simba")
-len(Animal.alive) == 1
+len(Animal.alive[0]) == 1
 isinstance(Animal.alive, Carnivore) is True
 ```
 

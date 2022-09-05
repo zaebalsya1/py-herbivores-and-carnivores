@@ -1,4 +1,4 @@
-# Сheck Your Code Against the Following Points:
+# Сheck Your Code Against the Following Points
 
 ## Code Efficiency
 
@@ -62,7 +62,7 @@ else:
 
 ## Code Style
 
-4. Use annotation, it is a good practice:
+1. Use annotation, it is a good practice:
 
 Good example:
 
@@ -77,9 +77,9 @@ def multiply_by_2(number):
     return number * 2
 ```
 
-5. Make sure you use the double quotes everywhere.
+2. Make sure you use the double quotes everywhere.
 
-6. Use interpolation instead of concatenation:
+3. Use interpolation instead of concatenation:
 
 Good example:
 
@@ -95,7 +95,7 @@ def print_full_name(name: str, surname: str):
     return "{" + "Name:" + name + ", surname:" + surname + "}"
 ```
 
-7. Use descriptive and correct variable names:
+4. Use descriptive and correct variable names:
 
 Good example:
 
@@ -112,5 +112,5 @@ def get_full_name(x: str, y: str):
 
 ## Clean Code
 
-8. Add comments, prints, and functions to check your solution when you write your code. 
+Add comments, prints, and functions to check your solution when you write your code. 
 Don't forget to delete them when you are ready to commit and push your code.

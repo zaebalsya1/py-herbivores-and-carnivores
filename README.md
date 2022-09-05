@@ -58,3 +58,4 @@ print(Animal.alive)
 ```
 Hint: Use magic method.
 
+> Check your code using this [checklist](checklist.md) before pushing your solution.

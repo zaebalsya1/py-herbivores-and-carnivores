@@ -1,22 +1,8 @@
-# Сheck your code against the following points:
+# Сheck Your Code Against the Following Points:
 
-1. **CODE EFFICIENCY:** use class name to get access to the class atrributes:
+## Code Efficiency
 
-Bad example:
-
-```python
-class Person:
-    city = "Kyiv"
-
-    def __init__(self, name: str):
-        self.name = name
-        
-    def print_city(self):
-        print(self.city)
-
-liz = Person("Liz")
-liz.print_city()
-```
+1. Use the class name to get access to the class attributes:
 
 Good example:
 
@@ -34,7 +20,32 @@ class Person:
 liz = Person("Liz")
 liz.print_city()
 ```
-2. **CODE EFFICIENCY:** you can change `bool` value in a one line:
+
+Bad example:
+
+```python
+class Person:
+    city = "Kyiv"
+
+    def __init__(self, name: str):
+        self.name = name
+        
+    def print_city(self):
+        print(self.city)
+
+liz = Person("Liz")
+liz.print_city()
+```
+
+2. You can change the `bool` value in one line:
+
+Good example:
+
+```python
+is_married = True
+
+is_married = not is_married
+```
 
 Bad example:
 
@@ -47,23 +58,11 @@ else:
     is_married = True
 ```
 
-Good example:
+3. Use the static method when needed.
 
-```python
-is_married = True
+## Code Style
 
-is_married = not is_married
-```
-
-3. **CODE EFFICIENCY:** use static method when needed.
-
-4. **CODE STYLE:** using annotation is a good practice:
-
-Bad example:
-```python
-def multiply_by_2(number):
-    return number * 2
-```
+4. Use annotation, it is a good practice:
 
 Good example:
 
@@ -72,16 +71,15 @@ def multiply_by_2(number: int):
     return number * 2
 ```
 
-5. **CODE STYLE:** make sure you are using double quotes everywhere.
-
-6. **CODE STYLE:** use interpolation instead of concatenation:
-
 Bad example:
-
 ```python
-def print_full_name(name: str, surname: str):
-    return "{" + "Name:" + name + ", surname:" + surname + "}"
+def multiply_by_2(number):
+    return number * 2
 ```
+
+5. Make sure you use the double quotes everywhere.
+
+6. Use interpolation instead of concatenation:
 
 Good example:
 
@@ -90,13 +88,14 @@ def print_full_name(name: str, surname: str):
     return f"{{Name: {name}, surname: {surname}}}"
 ```
 
-7. **CODE STYLE:** use descriptive and correct variable names.
-
 Bad example:
+
 ```python
-def get_full_name(x: str, y: str):
-    return f"{x} {y}"
+def print_full_name(name: str, surname: str):
+    return "{" + "Name:" + name + ", surname:" + surname + "}"
 ```
+
+7. Use descriptive and correct variable names:
 
 Good example:
 
@@ -104,5 +103,14 @@ Good example:
 def get_full_name(first_name: str, last_name: str):
     return f"{first_name} {last_name}"
 ```
-8. **CLEAN CODE:** when you write your code you can add comments, prints, functions to check your solution. 
-Don't forget to delete all this when you are ready to commit and push your code.
+
+Bad example:
+```python
+def get_full_name(x: str, y: str):
+    return f"{x} {y}"
+```
+
+## Clean Code
+
+8. Add comments, prints, and functions to check your solution when you write your code. 
+Don't forget to delete them when you are ready to commit and push your code.

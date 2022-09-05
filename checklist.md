@@ -1,39 +1,6 @@
 # Сheck your code against the following points:
 
-1. Make sure you are using double quotes everywhere.
-2. When you write your code you can add comments, prints, functions to check your solution. 
-   Don't forget to delete all this when you are ready to commit and push your code.
-3. Use descriptive and correct variable names.
-
-Bad example:
-```python
-def get_full_name(x: str, y: str):
-    return f"{x} {y}"
-```
-
-Good example:
-
-```python
-def get_full_name(first_name: str, last_name: str):
-    return f"{first_name} {last_name}"
-```
-
-4. Using annotation is a good practice:
-
-Bad example:
-```python
-def multiply_by_2(number):
-    return number * 2
-```
-
-Good example:
-
-```python
-def multiply_by_2(number: int):
-    return number * 2
-```
-
-5. Use class name to get access to the class atrributes:
+1. **CODE EFFICIENCY:** use class name to get access to the class atrributes:
 
 Bad example:
 
@@ -51,7 +18,6 @@ liz = Person("Liz")
 liz.print_city()
 ```
 
-
 Good example:
 
 ```python
@@ -68,8 +34,7 @@ class Person:
 liz = Person("Liz")
 liz.print_city()
 ```
-
-6. You can change `bool` value in a one line:
+2. **CODE EFFICIENCY:** you can change `bool` value in a one line:
 
 Bad example:
 
@@ -90,8 +55,26 @@ is_married = True
 is_married = not is_married
 ```
 
-7. Use static methods when needed.
-8. Use interpolation instead of concatenation:
+3. **CODE EFFICIENCY:** use static method when needed.
+
+4. **CODE STYLE:** using annotation is a good practice:
+
+Bad example:
+```python
+def multiply_by_2(number):
+    return number * 2
+```
+
+Good example:
+
+```python
+def multiply_by_2(number: int):
+    return number * 2
+```
+
+5. **CODE STYLE:** make sure you are using double quotes everywhere.
+
+6. **CODE STYLE:** use interpolation instead of concatenation:
 
 Bad example:
 
@@ -106,3 +89,20 @@ Good example:
 def print_full_name(name: str, surname: str):
     return f"{{Name: {name}, surname: {surname}}}"
 ```
+
+7. **CODE STYLE:** use descriptive and correct variable names.
+
+Bad example:
+```python
+def get_full_name(x: str, y: str):
+    return f"{x} {y}"
+```
+
+Good example:
+
+```python
+def get_full_name(first_name: str, last_name: str):
+    return f"{first_name} {last_name}"
+```
+8. **CLEAN CODE:** when you write your code you can add comments, prints, functions to check your solution. 
+Don't forget to delete all this when you are ready to commit and push your code.

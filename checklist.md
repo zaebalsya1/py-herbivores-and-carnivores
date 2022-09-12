@@ -79,6 +79,18 @@ def multiply_by_2(number):
 
 2. Make sure you use the double quotes everywhere.
 
+Good example:
+
+```python
+greetings = "Hi, mate!"
+```
+
+Bad example:
+
+```python
+greetings = 'Hi, mate!'
+```
+
 3. Use interpolation instead of concatenation:
 
 Good example:

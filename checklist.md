@@ -67,7 +67,7 @@ else:
 Good example:
 
 ```python
-def multiply_by_2(number: int) -> Union[int, float]:
+def multiply_by_2(number: int) -> int:
     return number * 2
 ```
 

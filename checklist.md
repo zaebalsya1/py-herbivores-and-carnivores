@@ -14,11 +14,11 @@ class Person:
         self.name = name
         
     @staticmethod    
-    def print_city():
+    def print_city() -> None:
         print(Person.city)
 
 liz = Person("Liz")
-liz.print_city()
+liz.print_city()  # Kyiv
 ```
 
 Bad example:
@@ -30,11 +30,11 @@ class Person:
     def __init__(self, name: str):
         self.name = name
         
-    def print_city(self):
+    def print_city(self) -> None:
         print(self.city)
 
 liz = Person("Liz")
-liz.print_city()
+liz.print_city()  # Kyiv
 ```
 
 2. You can change the `bool` value in one line:
@@ -67,7 +67,7 @@ else:
 Good example:
 
 ```python
-def multiply_by_2(number: int):
+def multiply_by_2(number: int) -> Union[int, float]:
     return number * 2
 ```
 
@@ -84,14 +84,14 @@ def multiply_by_2(number):
 Good example:
 
 ```python
-def print_full_name(name: str, surname: str):
+def print_full_name(name: str, surname: str) -> str:
     return f"{{Name: {name}, surname: {surname}}}"
 ```
 
 Bad example:
 
 ```python
-def print_full_name(name: str, surname: str):
+def print_full_name(name: str, surname: str) -> str:
     return "{" + "Name:" + name + ", surname:" + surname + "}"
 ```
 
@@ -100,13 +100,13 @@ def print_full_name(name: str, surname: str):
 Good example:
 
 ```python
-def get_full_name(first_name: str, last_name: str):
+def get_full_name(first_name: str, last_name: str) -> str:
     return f"{first_name} {last_name}"
 ```
 
 Bad example:
 ```python
-def get_full_name(x: str, y: str):
+def get_full_name(x: str, y: str) -> str:
     return f"{x} {y}"
 ```
 

@@ -121,8 +121,25 @@ Bad example:
 def get_full_name(x: str, y: str) -> str:
     return f"{x} {y}"
 ```
+5. Place each argument on a new line, including `self`, with proper indentation and formatting
+ 
+Good example:
 
+```python
+def __init__(
+        self, 
+        name: str,
+        age: int
+) -> None:
+```
+Bad example:
+
+```python
+def __init__(self, 
+             name: str,age: int) -> None:
+```
+
+6. It's good practice to specify type annotations for clarity, such as using `list[Animal]` instead of `list` to indicate a list of Animal instances
 ## Clean Code
 
-Add comments, prints, and functions to check your solution when you write your code. 
-Don't forget to delete them when you are ready to commit and push your code.
+1. No need to add comments if the code is clear and self-explanatory

@@ -139,7 +139,8 @@ def __init__(self,
              name: str,age: int) -> None:
 ```
 
-6. It's good practice to specify type annotations for clarity, such as using `list[Animal]` instead of `list` to indicate a list of Animal instances
+6. It's important to use type annotations for clarity, such as `list[Animal]` instead of just `list` to specify a list of Animal instances
+
 ## Clean Code
 
 1. No need to add comments if the code is clear and self-explanatory

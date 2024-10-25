@@ -7,7 +7,7 @@ Nature is well suited to reflect the principles of Object Oriented Programming.
 All instances of the `Animal` class must have health, name and hidden attribute. 
 Health is 100 and hidden is false by default.
 
-All alive animals should be in the class attribute `Animal.alive`. 
+All alive animals should be in the `__class__` attribute `Animal.alive`. 
 If the health of the animal reaches 0, the beast dies and it should 
 be removed from `Animal.alive`.
 ```python

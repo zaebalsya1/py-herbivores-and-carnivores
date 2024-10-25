@@ -143,4 +143,4 @@ def __init__(self,
 
 ## Clean Code
 
-1. No need to add comments if the code is clear and self-explanatory
+1. There’s no need to add comments if the code is clear and self-explanatory.
